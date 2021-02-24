@@ -23,7 +23,7 @@ class TestShopping(unittest.TestCase):
         self.d = sweets
 
     def test_shop(self):
-        self.assertDictEqual(self.id, self.d , msg="Сравнение словарей")
+        self.assertDictEqual(self.id, self.d, msg="Сравнение словарей")
 
 
 if __name__ == "__main__":

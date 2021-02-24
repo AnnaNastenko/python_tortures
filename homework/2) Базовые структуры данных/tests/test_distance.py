@@ -9,7 +9,7 @@ sys.path.append(d)
 from distance import moscow_london, moscow_paris, london_moscow, london_paris, paris_moscow, paris_london
 
 
-class TestFavMovie(unittest.TestCase):
+class TestDistance(unittest.TestCase):
     def setUp(self):
         # M
         self.iml, self.imp = 145.60219778561037, 130.38404810405297
