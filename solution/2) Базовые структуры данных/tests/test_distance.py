@@ -25,9 +25,9 @@ class TestDist(unittest.TestCase):
         self.lp = london_paris
         self.pl = paris_london
 
-        self.d = {'London': {'Moscow': 145.6, 'Paris': 42.43},
-                  'Moscow': {'London': 145.6, 'Paris': 130.38},
-                  'Paris': {'London': 42.43, 'Moscow': 130.38}}
+        self.d = {'London': {'Moscow': 145.60219778561037, 'Paris': 42.42640687119285},
+                  'Moscow': {'London': 145.60219778561037, 'Paris': 130.38404810405297},
+                  'Paris': {'London': 42.42640687119285, 'Moscow': 130.38404810405297}}
 
     def test_moscow(self):
         self.assertAlmostEqual(self.iml, self.ml, msg="Москва <-> Лондон", places=1)
@@ -47,4 +47,3 @@ class TestDist(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -14,26 +14,28 @@ sites = {
 # расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
 # Итоговое значение
 
-distances = {}
 
-# TODO здесь заполнение словаря
+# TODO здесь в переменные внести расстояния между городами
+# HINT чтобы корректно прошел 4ый тест, в задаче не следует использовать round!
+
 m = sites['Moscow']
 l = sites['London']
 p = sites['Paris']
 
 # Moscow_to_destination
-moscow_london = london_moscow = round(((m[0] - l[0]) ** 2 + (m[1] - l[1]) ** 2) ** .5, 2)
-moscow_paris = paris_moscow = round(((m[0] - p[0]) ** 2 + (m[1] - p[1]) ** 2) ** .5, 2)
-# moscow_london = london_moscow = ((m[0] - l[0]) ** 2 + (m[1] - l[1]) ** 2) ** .5
-# moscow_paris = paris_moscow = ((m[0] - p[0]) ** 2 + (m[1] - p[1]) ** 2) ** .5
+# moscow_london = london_moscow = round(((m[0] - l[0]) ** 2 + (m[1] - l[1]) ** 2) ** .5, 2)
+# moscow_paris = paris_moscow = round(((m[0] - p[0]) ** 2 + (m[1] - p[1]) ** 2) ** .5, 2)
+moscow_london = london_moscow = ((m[0] - l[0]) ** 2 + (m[1] - l[1]) ** 2) ** .5
+moscow_paris = paris_moscow = ((m[0] - p[0]) ** 2 + (m[1] - p[1]) ** 2) ** .5
 
 # London to_destination
 # london_to_moscow - ready!
-london_paris = paris_london = round(((l[0] - p[0]) ** 2 + (l[1] - p[1]) ** 2) ** .5, 2)
-# london_paris = paris_london = ((l[0] - p[0]) ** 2 + (l[1] - p[1]) ** 2) ** .5
+# london_paris = paris_london = round(((l[0] - p[0]) ** 2 + (l[1] - p[1]) ** 2) ** .5, 2)
+london_paris = paris_london = ((l[0] - p[0]) ** 2 + (l[1] - p[1]) ** 2) ** .5
 
 # Moscow_to_destination - ready!
 
+# TODO здесь заполнение словаря
 distances = {
     'Moscow': {'London': moscow_london,
                'Paris': moscow_paris
