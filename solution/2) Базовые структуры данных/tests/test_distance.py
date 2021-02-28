@@ -48,15 +48,3 @@ class TestDist(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-
-class TestFavMovie(unittest.TestCase):
-    def setUp(self):
-        self.f = 145.60219778561037
-        self.s = 145.6
-
-    def test(self):
-        self.assertAlmostEqual(self.f, self.s, places=1)
-
-
-if __name__ == "__main__":
-    unittest.main()
