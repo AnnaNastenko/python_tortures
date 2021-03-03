@@ -43,7 +43,7 @@ violator_songs_dict = {
 #   А другие три песни звучат ХХХ минут
 
 # TODO здесь ваш код
-sum2 = violator_songs_dict['Halo'] + \
+sum2 = violator_songs_dict['Sweetest Perfection'] + \
        violator_songs_dict['Policy of Truth'] + \
        violator_songs_dict['Blue Dress']  # 'Sweetest Perfection', 'Policy of Truth' и 'Blue Dress'
 print('Три песни звучат', sum2, 'минут', end='\n\n')

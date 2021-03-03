@@ -6,19 +6,33 @@ import unittest
 
 d = os.path.abspath(os.path.curdir)
 sys.path.append(d)
-from songs_list import sum1, sum2
+import songs_list
 
 
 class TestSongs(unittest.TestCase):
-    def setUp(self):
-        self.s1 = sum1
-        self.s2 = sum2
+
+    def _search_inside_list(self, song_name: str, validator_songs_list=songs_list.violator_songs_list) -> float:
+        song_name = song_name
+        for song_row in validator_songs_list:
+            if song_name in song_row:
+                break
+        song_duration = float(song_row[1])
+        return song_duration
+
+    def _search_inside_dict(self, song_name: str, violator_songs_dict=songs_list.violator_songs_dict) -> float:
+        song_name = song_name
+        song_duration = float(violator_songs_dict[song_name])
+        return song_duration
 
     def test_sum1(self):
-        self.assertAlmostEqual(14.930000000000001, self.s1, msg="'Halo', 'Enjoy the Silence' и 'Clean'", places=1)
+        songs = ['Halo', 'Enjoy the Silence', 'Clean']
+        answer = sum((self._search_inside_list(song) for song in songs))
+        self.assertAlmostEqual(answer, songs_list.sum1, msg=f"{songs}", places=1)
 
     def test_sum2(self):
-        self.assertAlmostEqual(13.36, self.s2, msg="'Sweetest Perfection', 'Policy of Truth' и 'Blue Dress'", places=1)
+        songs = ['Sweetest Perfection', 'Policy of Truth', 'Blue Dress']
+        answer = sum((self._search_inside_dict(song) for song in songs))
+        self.assertAlmostEqual(answer, songs_list.sum2, msg=f"{songs}", places=1)
 
 
 if __name__ == "__main__":

@@ -10,5 +10,17 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+month_qty = 10
 
 # TODO здесь ваш код
+one_month_coast = expenses - educational_grant
+month_left = 9
+count = 0
+total_summ = 0
+while count <= month_left:
+    one_month_coast = one_month_coast * 1.03
+    total_summ += one_month_coast
+    count += 1
+total_summ += expenses - educational_grant
+
+print('Студенту надо попросить', round(total_summ, 2), 'рублей')
