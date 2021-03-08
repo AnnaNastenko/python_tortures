@@ -13,14 +13,19 @@ educational_grant, expenses = 10000, 12000
 month_qty = 10
 
 # TODO здесь ваш код
-one_month_coast = expenses - educational_grant
-month_left = 9
-count = 0
-total_summ = 0
-while count <= month_left:
-    one_month_coast = one_month_coast * 1.03
-    total_summ += one_month_coast
-    count += 1
-total_summ += expenses - educational_grant
+i = 0
+student_income = educational_grant
+months_expenses = 0
+money_needs = 0
 
-print('Студенту надо попросить', round(total_summ, 2), 'рублей')
+while i < 10:
+
+    if i == 0:
+        months_expenses = expenses - educational_grant
+    elif i >= 1:
+        months_expenses = months_expenses + months_expenses * .03
+    i += 1
+    money_needs += months_expenses
+    print('Расходы в', i, 'месяце:', round(months_expenses, 2), ', Итого за', i, 'мес.:', round(money_needs,2))
+
+print('Студенту надо попросить', round(money_needs, 2), 'рублей')
