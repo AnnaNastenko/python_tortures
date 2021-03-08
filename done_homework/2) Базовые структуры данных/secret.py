@@ -32,3 +32,9 @@ decode_list = [secret_message[0][3],
                ]
 decode = " ".join(decode_list)
 print('Скрытое послание: ', decode)
+
+
+## Комментарии ##
+# В линии 7 появилась аннотация типа данных для переменной secret_message,
+# это advanced тема и чтобы никого не смущать я прошу убрать это!
+

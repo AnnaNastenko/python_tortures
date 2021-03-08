@@ -33,3 +33,7 @@ garden_diff = garden_set - meadow_set
 meadow_diff = meadow_set - garden_set
 
 
+## Комментарии ##
+# Зачет! Но, лучшая практика заменить - заменить логические операторы работы с множествами на методы объекта set
+
+

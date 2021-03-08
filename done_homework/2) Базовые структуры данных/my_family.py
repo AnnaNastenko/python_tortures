@@ -24,3 +24,7 @@ print('Andrew height is: ', father_height[1])
 #   Общий рост моей семьи - ХХ см
 family_height = my_family_height[0][1] + my_family_height[1][1] + my_family_height[2][1]
 print('My family height is: ', family_height)
+
+
+## Комментарии ##
+# lines 11-16 выровнять лист при помощи pycharm - чтобы он не подчеркивал и было красиво

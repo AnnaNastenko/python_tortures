@@ -63,6 +63,10 @@ chairs_cost = ch[0]['quantity'] * ch[0]['price'] + ch[1]['quantity'] * ch[1]['pr
 print('Стул -', chairs_qty, 'шт, стоимость', chairs_cost, 'руб')
 
 
+## Комментарии ##
+# Зачет!
+
+
 
 
 

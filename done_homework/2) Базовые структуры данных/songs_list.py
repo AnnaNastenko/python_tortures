@@ -50,3 +50,9 @@ blue_dress = violator_songs_dict.get('Blue Dress')
 sum2 = round(sweetest_perfection + policy_of_truth + blue_dress, 2)
 print('other three songs last: ', sum2, 'minutes')
 
+
+## Комментарии ##
+# Зачет! Интересно использования метода словарей <get> в строках 47-49.
+# Это очень powerful метод, я прошу поковырять его в ipython и рассказать разницу dot method <get> и извлечения значения
+# через __get_item__ -> наше привычное извлечение по ключу <some_dict>['key']
+
